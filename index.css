@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+body {
+  background-color: #EAFDFC;
+  margin: 0%;
+  padding: 0%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#s {
+  display: none;
+}
+
+section {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 150px 150px 150px 150px;
+  margin: 8% 25% 2% 25%;
+  height: 50%;
+  width: 50%;
+  gap:10px;
+  perspective: 1000px; 
+}
+
+
+.lice, .leda {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  position: absolute;
+  pointer-events: none;
+  box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;
+  
+}
+
+.kartica {
+  border-radius: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+
+}
+
+.lice {
+  transform: rotateY(180deg);
+  
+}
+
+.leda {
+  background-color: white;
+  border: 2px solid black;
+  backface-visibility: hidden;
+
+}
+
+.toggleCard {
+  transform: rotateY(180deg);
+}
+
+header {
+  padding-top: 10px;
+  background-color: #82AAE3;
+  height: 70px;
+  text-align: center;
+  box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;
+  color: #415571;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+
+footer {
+  background-color: #82AAE3;
+  height: 50px;
+  text-align: center;
+  margin-top: auto;
+  box-shadow:  0 5px 6px rgba(0, 0, 0, 0.2) inset;
+  padding-top: 10px;
+  color: #415571;
+  font-weight: bold;
+}
+
+
+
+#start-meni {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #BFEAF5;
+  background-color: #BFEAF5;
+  border-radius: 70px;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 50%;
+}
+
+
+#nova-igra, #upute, #o-projektu {
+  margin: 10px;
+  height: 50px;
+  width: 100px;
+  border: 1px solid #82AAE3;
+  border-radius: 30px;
+  background-color: #82AAE3;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+
+#text1, #text {
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+dt {
+  font-weight: bolder;
+}
+
+li {
+  list-style: none;
+}
+
+#dugme1, #dugme2, #dugme3, #restart-button {
+  margin: 2%;
+  margin-top: 40px;
+  height: 50px;
+  width: 153px;
+  border: 1px solid #82AAE3;
+  border-radius: 30px;
+  background-color: #82AAE3;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+
+#restart-container {
+  margin: 20% 25% 5% 25%;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #BFEAF5;
+  background-color: #BFEAF5;
+  border-radius: 70px;
+  padding-bottom: 50%;
+  padding: 10px;
+  height: 70%;
+  width: 50%;
+}
+
+#povratak {
+  color:#415571;
+  text-decoration: none;
+  width: 150px;
+}
+
+#povratak:hover {
+  color:#EAFDFC;
+  background-color: #415571;
+  width: 155px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  #start-meni {
+    width: 80%; 
+    top: 40%; 
+    padding: 15px;
+  }
+
+  section {
+    grid-template-columns: auto auto; 
+    grid-template-rows: auto;
+    margin: 5% auto;
+    width: 80%;
+  }
+
+  #nova-igra, #upute, #o-projektu, #dugme1, #dugme2, #dugme3, #restart-button {
+    width: 80%; 
+    font-size: medium;
+  }
+  
+  footer {
+    font-size: 14px;
+  }
+}

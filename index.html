@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> 
+    <title>PMF Memory</title>
+</head>
+<body>
+    <header>
+        <h1>PMF Memory</h1>
+    </header>
+    <section id="s"></section>    
+    <div id='restart-container' style="display: none;">
+        <button id="restart-button">Restart</button>
+        <p id="potezi"></p>
+        <p id="vrijeme"></p>
+        <a href="index.html" id="povratak">Povratak na Start meni</a>
+    </div>
+
+    <div id="start-meni">
+        <button onclick="novaIgra()" id="nova-igra">Nova igra</button>
+
+        <button id="dugme1" style="display: none;" onclick='igraj(nizP)'>Školski pribor</button>
+
+        <button id="dugme2" style="display: none;" onclick='igraj(nizF)'>Slike fakulteta</button>
+
+        <button id="dugme3" style="display: none;" onclick='igraj(nizR)'>Mix</button>
+        
+        <br>
+        <button onclick='upute()' id="upute">Upute</button>
+        <div id="text1" style="display: none;" onclick='upute()'>
+            <ul>
+                <li>PMF Memory sastoji se od ploče sa 2n kartica, n je različitih</li>
+                <li>Kartice sadrže motive PMF-a i školskog pribora</li>
+                <li>Kartice su nasumično poredane</li>
+                <li>Svaka kartica se nalazi tačno 2 puta</li>
+                <li>Kartice su okrenute licem prema ploči</li>
+                <li>Igrač bira dvije kartice, te ih okreće</li>
+                <li>Ukoliko su kartice jednake, ostaju otvorene</li>
+                <li>Ukoliko nisu, ponovo se okreću i igrač igra novi potez</li>
+                <li>Igra završava kada igrač upar sve kartice</li>
+                <li>Na početku igre, klikom na dugme 'Nova igra', otvara se polje sa 3 dugmića</li>
+                <li>Ti dugmići su opcije, tj. koje motive igrač želi odabrati</li>
+                <li>Vrijeme se počinje brojati klikom na jedno od dugmića</li>
+                <li>Na kraju igre se ispisuje broj poteza, vrijeme i restart opcija</li>
+            </ul>
+        </div>
+        <br>
+        <button onclick='oProjektu()' id="o-projektu">O projektu</button>
+        <div id="text" style="display: none;" onclick='oProjektu()'>
+            <dl>
+                <dt>Predmet:</dt>
+                <dd>Web programiranje I</dd>
+                <dd>prof. Elmedin Selmanović</dd>
+                <dd>Asistentica Eldina Delalić</dd>
+                <dt>Studij:</dt>
+                <dd>Stručni studij-Informacione tehnologije</dd>
+                <dt>Fakultet:</dt>
+                <dd>Prirodno-matematički fakultet Univerziteta u Sarajevu</dd>
+                <dt>Naziv projekta:</dt>
+                <dd>PMF Memory</dd>
+                <dt>Podaci o autoru:</dt>
+                <dd>Melisa</dd>
+            </dl>    
+        </div>
+    </div>
+    <footer>
+        &copy; 2025.
+    </footer>   
+    <script src="index.js"></script>
+</body>
+</html>
